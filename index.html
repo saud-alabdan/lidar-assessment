@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Business Maturity Assessment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Assessment Toolkit</p>
+          <h1>Business Capability Maturity Assessment</h1>
+          <p class="subtitle">
+            Evaluate your organization across five core dimensions and get
+            targeted recommendations to improve performance.
+          </p>
+        </div>
+        <button id="calculateBtn" class="primary-btn" type="button">
+          Calculate Results
+        </button>
+      </header>
+
+      <section class="content-grid">
+        <form id="assessmentForm" class="assessment-card">
+          <div id="sectionsContainer" class="sections"></div>
+        </form>
+
+        <aside class="results-card" aria-live="polite">
+          <h2>Results</h2>
+          <p class="hint">Complete ratings and click “Calculate Results”.</p>
+
+          <div class="score-pill">
+            <span>Overall Score</span>
+            <strong id="overallScore">0.0 / 5</strong>
+          </div>
+
+          <div class="classification" id="classification">Unrated</div>
+
+          <div>
+            <h3>Section Scores</h3>
+            <ul id="sectionScores" class="score-list"></ul>
+          </div>
+
+          <div>
+            <h3>Recommendations</h3>
+            <ul id="recommendations" class="recommendation-list"></ul>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <template id="questionTemplate">
+      <fieldset class="question-block">
+        <legend></legend>
+        <div class="scale-options"></div>
+      </fieldset>
+    </template>
+
+    <script src="script.js"></script>
+  </body>
+</html>
